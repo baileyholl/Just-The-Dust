@@ -18,4 +18,7 @@ public class IngotCompat {
 	public static ItemStack tinFinder(){
 		return OreDictionary.getOres("ingotTin").get(0);
 	}
+	public static ItemStack aluminumFinder(){
+		return OreDictionary.getOres("ingotAluminum").get(0);
+	}
 }

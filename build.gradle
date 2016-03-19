@@ -21,11 +21,11 @@ plugins {
 }
 */
 version = "1.0"
-group= "com.DrasticDemise.justthedust" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "justthedust"
+group= "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "modid"
 
 minecraft {
-    version = "1.8.9-11.15.1.1742"
+    version = "1.8.9-11.15.1.1764"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.

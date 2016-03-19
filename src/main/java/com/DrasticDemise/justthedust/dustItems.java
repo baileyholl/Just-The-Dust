@@ -5,6 +5,7 @@ import items.IronDust;
 import items.LeadDust;
 import items.SilverDust;
 import items.TinDust;
+import items.AluminumDust;
 import items.CopperDust;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -22,6 +23,7 @@ public class dustItems {
 	public static TinDust tinDust;
 	public static LeadDust leadDust;
 	public static SilverDust silverDust;
+	public static AluminumDust aluminumDust;
 	
 	//Initializes new dust objects
 	public static void init(){
@@ -31,6 +33,7 @@ public class dustItems {
 		tinDust = new TinDust();
 		leadDust = new LeadDust();
 		silverDust = new SilverDust();
+		aluminumDust = new AluminumDust();
 	}
 	
 	//Adds dusts to the ore dictionary
@@ -41,6 +44,7 @@ public class dustItems {
 		OreDictionary.registerOre("dustTin", tinDust);
 		OreDictionary.registerOre("dustLead", leadDust);
 		OreDictionary.registerOre("dustSilver", silverDust);
+		OreDictionary.registerOre("dustAluminum", aluminumDust);
 	}
 	
 	public static void smeltingRecipes(){
@@ -62,6 +66,9 @@ public class dustItems {
 		if(OreDictionary.getOres("ingotLead").size() > 0){
 			GameRegistry.addSmelting(new ItemStack(dustItems.leadDust), com.DrasticDemise.justthedust.IngotCompat.leadFinder(), 0.5F);
 		}
+		if(OreDictionary.getOres("ingotAluminum").size() > 0){
+			GameRegistry.addSmelting(new ItemStack(dustItems.aluminumDust), com.DrasticDemise.justthedust.IngotCompat.aluminumFinder(), 0.5F);
+		}
 	}
 	//Initializes Models
 	@SideOnly(Side.CLIENT)
@@ -72,5 +79,6 @@ public class dustItems {
 		tinDust.initModel();
 		leadDust.initModel();
 		silverDust.initModel();
+		aluminumDust.initModel();
     }
 }
